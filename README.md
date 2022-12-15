@@ -10,7 +10,7 @@ Logstash appender가 포함 된 spring boot starter입니다.
     <dependency>
         <groupId>kr.sprouts.autoconfigure</groupId>
         <artifactId>sprouts-logstash-appender-spring-boot-starter</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2-SNAPSHOT</version>
     </dependency>
 </dependencies>
 ```
