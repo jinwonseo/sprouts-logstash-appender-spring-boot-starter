@@ -6,7 +6,6 @@ import kr.sprouts.autoconfigure.properties.LogstashAppenderProperty;
 import net.logstash.logback.appender.LogstashTcpSocketAppender;
 import net.logstash.logback.encoder.LogstashEncoder;
 import net.logstash.logback.stacktrace.ShortenedThrowableConverter;
-import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +16,6 @@ import java.util.stream.Collectors;
 @Configuration
 @EnableConfigurationProperties(value = { LogstashAppenderProperty.class })
 public class LogstashAppenderConfiguration {
-    private final Logger logger = LoggerFactory.getLogger(LogstashAppenderProperty.class);
 
     private final LogstashAppenderProperty logstashAppenderProperty;
 
@@ -26,7 +24,8 @@ public class LogstashAppenderConfiguration {
 
         this.initializeLogstashAppender((LoggerContext) LoggerFactory.getILoggerFactory());
 
-        this.logger.info(String.format("Initialized %s", LogstashAppenderProperty.class.getName()));
+        LoggerFactory.getLogger(LogstashAppenderConfiguration.class)
+                .info(String.format("Initialized %s", LogstashAppenderConfiguration.class.getName()));
     }
 
     private void initializeLogstashAppender(LoggerContext loggerContext) {
