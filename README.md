@@ -28,6 +28,6 @@ sprouts:
 ```
 
 ## Related dependencies
-> * [log4j](https://logging.apache.org/log4j/2.x/)
-> * [logback](https://logback.qos.ch/)
-> * [logstash-logback-encoder](https://github.com/logfellow/logstash-logback-encoder)
+* [log4j](https://logging.apache.org/log4j/2.x/)
+* [logback](https://logback.qos.ch/)
+* [logstash-logback-encoder](https://github.com/logfellow/logstash-logback-encoder)
