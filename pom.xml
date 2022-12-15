@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>kr.sprouts.autoconfigure</groupId>
 	<artifactId>sprouts-logstash-appender-spring-boot-starter</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>sprouts-logstash-appender-spring-boot-starter</name>
 	<description>Sprouts logstash appender autoconfigure</description>
 	<properties>
@@ -19,8 +19,6 @@
 	<profiles>
 		<profile>
 			<id>private-gitlab-deploy</id>
-			<activation></activation>
-			<properties></properties>
 			<distributionManagement>
 				<repository>
 					<id>ci-gitlab-maven</id>
@@ -34,8 +32,6 @@
 		</profile>
 		<profile>
 			<id>private-nexus3-deploy</id>
-			<activation></activation>
-			<properties></properties>
 			<distributionManagement>
 				<repository>
 					<id>private-nexus3-maven-releases</id>
